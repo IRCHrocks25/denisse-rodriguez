@@ -99,6 +99,11 @@ h3{ font-size:clamp(2.75rem, 2.4rem + 1.4vw, 4rem); font-weight:400; line-height
 .menu-btn.is-open .bars span:nth-child(1){ transform:translateY(5.5px) rotate(45deg) }
 .menu-btn.is-open .bars span:nth-child(2){ opacity:0 }
 .menu-btn.is-open .bars span:nth-child(3){ transform:translateY(-5.5px) rotate(-45deg) }
+@media (max-width:919px){
+  .menu-btn{ color:var(--charcoal); text-shadow:none }
+  .menu-btn .bars span{ box-shadow:none }
+  .menu-btn.is-open{ color:var(--ivory) }
+}
 @media (min-width:920px){
   .nav__links{ display:flex }
   .menu-btn{ display:none }
@@ -153,14 +158,18 @@ h3{ font-size:clamp(2.75rem, 2.4rem + 1.4vw, 4rem); font-weight:400; line-height
 .known__body{ max-width:66ch; margin:clamp(3rem,6vw,5rem) auto 0; text-align:left }
 .known__body p + p{ margin-top:1.3rem }
 .impact{ font-family:var(--serif); font-style:italic; color:var(--plum) }
-.stats{ margin-top:clamp(3rem,6vw,5rem); display:grid; grid-template-columns:repeat(4, 1fr); gap:0; border-top:1px solid var(--line) }
-.stat{ padding:1.6rem 1.2rem; border-bottom:1px solid var(--line); text-align:left; border-right:1px solid var(--line) }
-.stat:last-child{ border-right:0 }
-.stat__n{ font-family:var(--serif); font-weight:400; font-size:clamp(1.5rem, 1rem + 1.4vw, 2.8rem); line-height:1.05; white-space:nowrap }
+.stats{ margin-top:clamp(3rem,6vw,5rem); display:grid; grid-template-columns:1fr; gap:0; border-top:1px solid var(--line) }
+.stat{ padding:1.6rem 1.2rem; border-bottom:1px solid var(--line); text-align:left; border-right:0 }
+.stat__n{ font-family:var(--serif); font-weight:400; font-size:clamp(1.5rem, 1rem + 1.4vw, 2.8rem); line-height:1.05; white-space:normal; overflow-wrap:break-word }
 .stat__l{ margin-top:.9rem; color:var(--muted); font-size:clamp(1rem, .95rem + .15vw, 1.1rem); line-height:1.4; font-family:var(--sans); max-width:22ch }
+@media (min-width:560px){
+  .stats{ grid-template-columns:1fr 1fr }
+  .stat:nth-child(odd){ border-right:1px solid var(--line) }
+}
 @media (min-width:860px){
-  .stats{ border-top:none; gap:1px; background:var(--line) }
+  .stats{ border-top:none; gap:1px; background:var(--line); grid-template-columns:repeat(4, 1fr) }
   .stat{ background:var(--paper); padding:2rem 1.4rem; border:0 }
+  .stat__n{ white-space:nowrap }
 }
 
 /* =====================================================================
