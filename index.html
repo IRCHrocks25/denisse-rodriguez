@@ -103,6 +103,7 @@ h3{ font-size:clamp(2.75rem, 2.4rem + 1.4vw, 4rem); font-weight:400; line-height
   .menu-btn{ color:var(--charcoal); text-shadow:none }
   .menu-btn .bars span{ box-shadow:none }
   .menu-btn.is-open{ color:var(--ivory) }
+  .nav.menu-open .brand{ visibility:hidden }
 }
 @media (min-width:920px){
   .nav__links{ display:flex }
@@ -925,6 +926,7 @@ h3{ font-size:clamp(2.75rem, 2.4rem + 1.4vw, 4rem); font-weight:400; line-height
 
   function setOpen(open){
     menu.classList.toggle('open',open); btn.classList.toggle('is-open',open);
+    nav.classList.toggle('menu-open',open);
     btn.setAttribute('aria-expanded',open?'true':'false');
     btn.setAttribute('aria-label',open?'Close menu':'Open menu');
     var w=btn.querySelector('.menu-word'); if(w) w.textContent=open?'Close':'Menu';
