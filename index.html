@@ -328,20 +328,20 @@ h3{ font-size:clamp(2.75rem, 2.4rem + 1.4vw, 4rem); font-weight:400; line-height
 /* =====================================================================
    8 · FOUNDER — full-bleed dark + text + framed card (Template E)
    ===================================================================== */
-.founder{ position:relative; background:var(--charcoal); color:var(--ivory); overflow:hidden }
+.founder{ position:relative; background:var(--ivory); color:var(--ink); overflow:hidden }
 .founder::before{ content:""; position:absolute; inset:0; pointer-events:none;
-  background:radial-gradient(70% 60% at 90% 10%, rgba(176,124,82,.16), transparent 60%),
-            radial-gradient(60% 60% at 5% 100%, rgba(122,79,90,.22), transparent 60%); }
+  background:radial-gradient(70% 60% at 90% 10%, rgba(176,124,82,.08), transparent 60%),
+            radial-gradient(60% 60% at 5% 100%, rgba(122,79,90,.06), transparent 60%); }
 .founder__inner{ position:relative }
 .founder__label{ font-family:var(--sans); font-size:.82rem; letter-spacing:.28em; text-transform:uppercase; color:var(--terra); margin-bottom:2rem }
 .founder__grid{ display:grid; grid-template-columns:1fr; gap:clamp(2.5rem,5vw,4rem); align-items:center }
-.founder__text h2{ color:var(--ivory); max-width:none; margin-bottom:1.8rem }
-.founder__text p{ color:rgba(250,247,244,.82); max-width:60ch; font-size:clamp(1.15rem, 1.1rem + .15vw, 1.25rem); font-family:var(--sans); line-height:1.6 }
+.founder__text h2{ color:var(--ink); max-width:none; margin-bottom:1.8rem }
+.founder__text p{ color:var(--muted); max-width:60ch; font-size:clamp(1.15rem, 1.1rem + .15vw, 1.25rem); font-family:var(--sans); line-height:1.6 }
 .founder__text p + p{ margin-top:1.2rem }
-.founder__q{ font-family:var(--serif); font-style:italic; font-size:clamp(1.4rem, 1.3rem + .3vw, 1.6rem); line-height:1.2; color:var(--terra); margin:1.6rem 0 }
+.founder__q{ font-family:var(--serif); font-style:italic; font-size:clamp(1.4rem, 1.3rem + .3vw, 1.6rem); line-height:1.2; color:var(--plum); margin:1.6rem 0 }
 .founder__card{ border:1px solid rgba(250,247,244,.28); background:rgba(250,247,244,.03); border-radius:6px; padding:clamp(2rem,5vw,3.2rem) }
-.founder__card .k{ font-family:var(--sans); font-size:.7rem; letter-spacing:.24em; text-transform:uppercase; color:rgba(250,247,244,.6); margin-bottom:1.4rem }
-.founder__card p{ font-family:var(--serif); font-size:clamp(1.4rem, 1.3rem + .3vw, 1.6rem); line-height:1.24; color:var(--ivory) }
+.founder__card .k{ font-family:var(--sans); font-weight:600; font-size:.75rem; letter-spacing:.24em; text-transform:uppercase; color:var(--plum); margin-bottom:1.4rem }
+.founder__card p{ font-family:var(--serif); font-size:clamp(1.4rem, 1.3rem + .3vw, 1.6rem); line-height:1.24; color:var(--ink) }
 .founder__card .sig{ margin-top:1.6rem; font-family:var(--serif); font-style:italic; font-size:clamp(1.15rem, 1.1rem + .15vw, 1.25rem); color:var(--terra) }
 @media (min-width:900px){ .founder__grid{ grid-template-columns:1.15fr .85fr } }
 
@@ -433,7 +433,7 @@ h3{ font-size:clamp(2.75rem, 2.4rem + 1.4vw, 4rem); font-weight:400; line-height
 .founder__card{ padding:0 !important; background:transparent !important; border:0 !important; overflow:hidden }
 .founder__card .fc-img{ margin:0; overflow:hidden }
 .founder__card .fc-img img{ width:100%; aspect-ratio:3/4; object-fit:cover; display:block }
-.founder__card .fc-body{ background:rgba(250,247,244,.04); border:1px solid rgba(250,247,244,.28); border-top:0; padding:clamp(1.8rem,4vw,2.6rem) }
+.founder__card .fc-body{ background:#f6f0eb; border:1px solid var(--line); border-top:0; padding:clamp(1.8rem,4vw,2.6rem) }
 
 .mv-img{ margin:clamp(3rem,6vw,4.5rem) 0; overflow:hidden; width:100% }
 
@@ -456,6 +456,22 @@ h3{ font-size:clamp(2.75rem, 2.4rem + 1.4vw, 4rem); font-weight:400; line-height
 .reveal{ opacity:0; transform:translateY(20px); transition:opacity .8s ease,transform .8s ease }
 .reveal.in{ opacity:1; transform:none }
 @media (prefers-reduced-motion:reduce){ .reveal{ opacity:1; transform:none; transition:none } }
+
+/* Section 1 — Hero "what we do" bold lead */
+.hero__lead{ max-width:52ch; margin-top:1.8rem; color:var(--ink); font-size:clamp(1.32rem, 1.2rem + .4vw, 1.55rem); line-height:1.5; font-family:var(--sans); font-weight:600 }
+
+/* Section 2 — What Changes (moved up, sits on ivory) */
+.whatchanges{ background:var(--ivory); text-align:center }
+.whatchanges h2{ color:var(--ink) }
+.whatchanges__sub{ margin-top:1.6rem; max-width:78ch; margin-inline:auto; color:var(--ink); font-size:clamp(1.2rem, 1.1rem + .3vw, 1.4rem); font-family:var(--sans); line-height:1.55 }
+.whatchanges .stops{ margin:3rem auto 0; max-width:72ch; text-align:left; list-style:none; padding:0; border-top:1px solid var(--line) }
+.whatchanges .stops li{ padding:1.4rem 0 1.4rem 2.5rem; position:relative; border-bottom:1px solid var(--line); color:var(--ink); font-family:var(--sans); font-size:clamp(1.15rem, 1.05rem + .3vw, 1.35rem); line-height:1.5; font-style:normal; text-shadow:none }
+.whatchanges .stops li::before{ content:""; position:absolute; left:0; top:1.85em; width:16px; height:1px; background:var(--terra) }
+.whatchanges .cta-row{ justify-content:center }
+
+/* Section 7 — Services sub-headline */
+.svc__subhead{ font-family:var(--serif); font-style:italic; color:var(--plum); font-size:clamp(1.4rem, 1.2rem + .5vw, 1.9rem); margin-top:.4rem; margin-bottom:2rem }
+
 </style>
 </head>
 <body>
@@ -499,8 +515,10 @@ h3{ font-size:clamp(2.75rem, 2.4rem + 1.4vw, 4rem); font-weight:400; line-height
 <section class="hero">
   <div class="hero__text">
     <h1 class="reveal">Your work changes lives. Your systems should <span class="em">help carry it.</span></h1>
+    <p class="hero__lead reveal"><b>In Service AI rebuilds the operations underneath mission-driven organizations, so your data, your workflows, and your reporting can finally hold the weight of what you do.</b></p>
     <p class="hero__sub reveal">You built something worth protecting, not just profit. And over time, the work has come to rest on scattered spreadsheets, informal knowledge, and cumbersome workflows that were never meant to carry this much.</p>
     <p class="hero__sub reveal">In Service AI works beside you as your strategic partner, using practical, human-centered AI to preserve the heart of what already exists, strengthen the operations underneath it, and make your impact easier to see, sustain, and grow. Not someday. This can start now.</p>
+    <!-- Handoff: PRIMARY CTA → Audit landing page (#start). SECONDARY CTA → Services section (#services). -->
     <div class="hero__cta reveal">
       <a class="clink plum" href="#start">Take the Free Operational Drag Audit <span class="cv" aria-hidden="true">&#10095;</span></a>
       <a class="clink" href="#services">Start With a Diagnostic Snapshot <span class="cv" aria-hidden="true">&#10095;</span></a>
@@ -517,10 +535,27 @@ h3{ font-size:clamp(2.75rem, 2.4rem + 1.4vw, 4rem); font-weight:400; line-height
   </div>
 </section>
 
-<!-- ============================ 2 · CREDIBILITY (known-for) ============================ -->
+<!-- ============================ 2 · WHAT CHANGES (moved up) ============================ -->
+<section class="section whatchanges" id="whatchanges">
+  <div class="wrap">
+    <h2 class="reveal">What changes.</h2>
+    <p class="whatchanges__sub reveal">The work that matters most has always been under-resourced. That changes the moment your infrastructure starts working as hard as your team does.</p>
+    <ul class="stops reveal">
+      <li>One number, one source — the truth that funders, boards, and teams can all rely on.</li>
+      <li>Institutional knowledge that stays put, even when someone takes a vacation or moves on.</li>
+      <li>Reporting ready before anyone asks — no more late-night reconstructions from spreadsheets.</li>
+      <li>Your best people freed up for the work only they can do, not the work a system could carry instead.</li>
+    </ul>
+    <div class="cta-row reveal">
+      <a class="btn" href="#start">Take the Free Operational Drag Audit <span class="cv" aria-hidden="true">&#10095;</span></a>
+      <a class="btn btn--ghost" href="#services">See the Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 3 · CREDIBILITY ============================ -->
 <section class="section known" id="about">
   <div class="wrap">
-    <span class="eyebrow reveal">Impact Intelligence</span>
     <h2 class="reveal">Enterprise rigor, applied fresh.</h2>
     <p class="serif-lede known__lede reveal">Denisse built her expertise where the stakes were highest. Now she builds it for organizations that never had access to it.</p>
     <div class="cta-row reveal">
@@ -536,7 +571,6 @@ h3{ font-size:clamp(2.75rem, 2.4rem + 1.4vw, 4rem); font-weight:400; line-height
     </div>
 
     <div class="known__body reveal">
-      <p>She calls this discipline <span class="impact">Impact Intelligence</span>: turning scattered operations and data into evidence your funders, board, and team can actually trust, with AI as the accelerant, not the headline.</p>
       <p>As a Senior Leader at Deloitte, Denisse Rodriguez oversaw multimillion-dollar digital transformations across 70+ countries and four continents. She specializes in the operational and data disciplines that determine whether AI actually works or just looks like it does: process design, workflow architecture, and data governance. In her enterprise engagements, that discipline turned fragmented processes and scattered data into systems every stakeholder could trust, ensuring that the organizational impact was measurable, defensible, and visible to every stakeholder, including those on the front lines and in the boardroom.</p>
       <p>Her systems have held up in the world's most complex environments. They can hold up in yours without asking you to start over.</p>
     </div>
@@ -550,20 +584,41 @@ h3{ font-size:clamp(2.75rem, 2.4rem + 1.4vw, 4rem); font-weight:400; line-height
   </div>
 </section>
 
-<!-- ============================ 3 · WHO WE SERVE (dark block) ============================ -->
+<!-- ============================ 4 · WHO WE SERVE ============================ -->
 <section class="section serve">
   <div class="wrap serve__inner">
     <div class="serve__head reveal">
       <h3>Who We Serve</h3>
       <a class="clink on-dark" href="#method">See the Method <span class="cv" aria-hidden="true">&#10095;</span></a>
     </div>
-    <p class="serve__list reveal">
-      <span class="sw">For-Profit Healthcare</span> <span class="sl">/</span> <span class="sw">Social Services</span> <span class="sl">/</span> <span class="sw">Community Development</span> <span class="sl">/</span> <span class="sw">Founders</span> <span class="sl">/</span> <span class="sw">Operations Leaders</span> <span class="sl">/</span> <span class="sw">Directors &amp; CEOs</span> <span class="sl">/</span> <span class="sw">Mission-Driven Organizations</span> <span class="end">… and the leaders who carry them.</span>
-    </p>
+    <p class="serve__list reveal">In Service AI works with <span class="sw">for-profit healthcare</span>, <span class="sw">social services</span>, and <span class="sw">community development</span> organizations. Typically teams of around <span class="sw">25 people</span>, led by someone who has outgrown the systems they built to get here.</p>
   </div>
 </section>
 
-<!-- ============================ 4 · PROBLEM ============================ -->
+<!-- ============================ 5 · MISSION & VISION ============================ -->
+<section class="section mv" id="mission">
+  <div class="wrap">
+    <div class="mv__inner reveal">
+      <span class="eyebrow" style="color:var(--plum)">Mission &amp; Vision</span>
+      <h2 style="margin-top:1.4rem">The big idea behind In Service AI.</h2>
+      <p class="lede" style="margin-top:1.4rem">Every part of this practice exists to close one gap: between what mission-driven leaders carry and what their systems actually support.</p>
+    </div>
+    <div class="mv__grid">
+      <div class="mv__card reveal"><h3>Mission.</h3><p>In Service AI exists to lighten the load carried by the people doing the world's most meaningful work, using human-centered AI to clear the invisible drag between what you do and what the world can see of it.</p></div>
+      <div class="mv__card reveal"><h3>Vision.</h3><p>In Service AI will be known as the partner that helped mission-led organizations run with the discipline of a large institution without losing the heart that makes them special, one organization at a time.</p></div>
+    </div>
+    
+    <figure class="mv-hero reveal" aria-hidden="false">
+      <img src="https://d8j0ntlcm91z4.cloudfront.net/user_35NBuSfIPglHIOMZxxqoxDRFcyj/hf_20260830_192620_ea4bd24a-6570-47d5-b6e0-eae5e1ab22aa.png" alt="">
+      <div class="mv-hero__tint"></div>
+      <p class="mv-hero__text">Deep operational knowledge, in service of leaders doing work that matters, so they wake up energized instead of exhausted, with organizations that finally run as steadily as their mission deserves.</p>
+    </figure>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ============================ 6 · PROBLEM (with benchmarks as continuation) ============================ -->
 <section class="section" id="problem">
   <div class="wrap">
     <h2 class="reveal" style="margin-top:1.4rem">The hidden load you've been carrying.</h2>
@@ -585,7 +640,7 @@ h3{ font-size:clamp(2.75rem, 2.4rem + 1.4vw, 4rem); font-weight:400; line-height
     <p class="notpersonal reveal"><b>None of this is a personal failing.</b> It's what happens when systems get built under pressure instead of by design, and no dashboard or AI tool fixes that on its own.</p>
 
     <div class="cost reveal" style="--cost-bg:url('https://d8j0ntlcm91z4.cloudfront.net/user_35NBuSfIPglHIOMZxxqoxDRFcyj/hf_20260831_085132_f866e98e-a89e-4147-acc9-6badb99daa3f.png')">
-      <p class="cost__intro">Based on enterprise benchmarks, here's what fragmented systems typically cost a 25-person team, until the right foundation is in place:</p>
+      <p class="cost__intro">Here is what that load costs before anyone puts a number on it.</p>
       <div class="cost__grid">
         <div><div class="cost__n">6–8<span class="u">hours per person, per week</span></div></div>
         <div><div class="cost__n">~7,800<span class="u">hours a year — 3.75 full-time employees</span></div></div>
@@ -607,10 +662,11 @@ h3{ font-size:clamp(2.75rem, 2.4rem + 1.4vw, 4rem); font-weight:400; line-height
 
 <hr class="rule">
 
-<!-- ============================ 5 · SERVICES (title + intro + list) ============================ -->
+<!-- ============================ 7 · SERVICES ============================ -->
 <section class="section svc" id="services">
   <div class="wrap">
-    <h2 class="reveal" style="margin-top:1.4rem">Pathways to clarity.</h2>
+    <h2 class="reveal" style="margin-top:1.4rem">Services.</h2>
+    <p class="svc__subhead reveal">Start where you are.</p>
     <div class="svc__row">
       <div class="svc__intro reveal">
         <div class="svc__intro-rule"></div>
@@ -628,7 +684,7 @@ h3{ font-size:clamp(2.75rem, 2.4rem + 1.4vw, 4rem); font-weight:400; line-height
     <div class="offerings reveal">
       <details class="offering">
         <summary>
-          <span class="offering__no">No. 1</span>
+          <span class="offering__no">01</span>
           <span class="offering__title">Diagnostic Snapshot</span>
           <span class="offering__toggle" aria-hidden="true">+</span>
         </summary>
@@ -636,7 +692,7 @@ h3{ font-size:clamp(2.75rem, 2.4rem + 1.4vw, 4rem); font-weight:400; line-height
       </details>
       <details class="offering">
         <summary>
-          <span class="offering__no">No. 2</span>
+          <span class="offering__no">02</span>
           <span class="offering__title">AI-Ready Operations Assessment</span>
           <span class="offering__toggle" aria-hidden="true">+</span>
         </summary>
@@ -644,7 +700,7 @@ h3{ font-size:clamp(2.75rem, 2.4rem + 1.4vw, 4rem); font-weight:400; line-height
       </details>
       <details class="offering">
         <summary>
-          <span class="offering__no">No. 3</span>
+          <span class="offering__no">03</span>
           <span class="offering__title">AI System Implementation</span>
           <span class="offering__toggle" aria-hidden="true">+</span>
         </summary>
@@ -652,7 +708,7 @@ h3{ font-size:clamp(2.75rem, 2.4rem + 1.4vw, 4rem); font-weight:400; line-height
       </details>
       <details class="offering">
         <summary>
-          <span class="offering__no">No. 4</span>
+          <span class="offering__no">04</span>
           <span class="offering__title">Full Operational Transformation</span>
           <span class="offering__toggle" aria-hidden="true">+</span>
         </summary>
@@ -697,11 +753,35 @@ h3{ font-size:clamp(2.75rem, 2.4rem + 1.4vw, 4rem); font-weight:400; line-height
 
 <hr class="rule">
 
-<!-- ============================ 6 · METHOD ============================ -->
+<!-- ============================ 8 · PROOF / TESTIMONIALS (Sid first) ============================ -->
+<section class="section" id="proof">
+  <div class="wrap">
+    <span class="eyebrow reveal">New Practice</span>
+    <div class="proof__grid" style="margin-top:1.6rem">
+      <div class="proof__lead reveal">
+        <h2>New practice. Proven judgment.</h2>
+        <p>In Service AI is a new practice, built on decades of enterprise experience. That perspective brings structure, care, and practical judgment to the work of strengthening what your team already depends on.</p>
+        <p>Denisse isn't bringing a technology playbook into your organization. She brings three decades of building operational foundations that people, data, and technology can all rely on. A Master of e-Business. Certifications in progress in AI-Assisted Consulting and AI-Assisted Agency Acceleration. Native fluency in English and Spanish, which means she can sit in a room with your bilingual staff, your board, or your funders and never lose the nuance. A recent teaching session for the Sustainability Network on AI fundamentals, because she'd rather explain this clearly than sell it vaguely.</p>
+        <p>She helps mission-driven organizations build the systems that allow people, data, and AI to work together. She's not a tech vendor, because her work begins by strengthening the systems organizations already rely on, and she's not an implementation shop that leaves once the tool is installed. Every founder and operations leader she's spoken with carries some version of the same unspoken fear:</p>
+        <p class="fear">“We built this with everything we had. Please don't break it.”</p>
+        <p>That fear is the starting point of her method, not an objection to get past. Every engagement starts by asking what's already working, so she knows exactly what to protect while building.</p>
+        <div class="cta-row"><a class="clink" href="#method">See the Method <span class="cv" aria-hidden="true">&#10095;</span></a></div>
+      </div>
+      <div class="reveal">
+        <p class="qlabel">What former colleagues say</p>
+        <figure class="quote"><p>“She leads with vision and empathy, bringing structure to complex problems while the people around her feel trusted and empowered.”</p><cite>Sid Seth</cite></figure>
+        <figure class="quote"><p>“Across complex data initiatives, Denisse brought order to chaos, giving her team full autonomy while shielding them from roadblocks.”</p><cite>Sayandeep Mall</cite></figure>
+        <figure class="proof-close-img reveal" aria-hidden="true"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_35NBuSfIPglHIOMZxxqoxDRFcyj/hf_20260830_192620_cb5e0e2f-997d-42dd-9cd0-3ce73eeb3db4.png" alt=""></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 9 · METHOD ============================ -->
 <section class="section method" id="method">
   <div class="wrap">
     <span class="eyebrow reveal">The Method</span>
-    <h2 class="reveal" style="margin-top:1.4rem">The path of restoration.</h2>
+    <h2 class="reveal" style="margin-top:1.4rem">How the work actually goes.</h2>
     <p class="method__intro lede reveal">A clear process built for your organization's independence, not your dependency on a consultant. That's why ours is an accompaniment model, not a drop-and-run implementation. We meet clients where they are, partner with them through the hard middle of unraveling and improving their operations, and close every engagement with a transition built for their team to own.</p>
     <div class="method__layout">
       <figure class="method__img reveal" aria-hidden="true">
@@ -771,33 +851,7 @@ h3{ font-size:clamp(2.75rem, 2.4rem + 1.4vw, 4rem); font-weight:400; line-height
   </div>
 </section>
 
-<hr class="rule">
-
-<!-- ============================ 7 · PROOF ============================ -->
-<section class="section" id="proof">
-  <div class="wrap">
-    <span class="eyebrow reveal">New Practice</span>
-    <div class="proof__grid" style="margin-top:1.6rem">
-      <div class="proof__lead reveal">
-        <h2>New practice. Proven judgment.</h2>
-        <p>In Service AI is a new practice, built on decades of enterprise experience. That perspective brings structure, care, and practical judgment to the work of strengthening what your team already depends on.</p>
-        <p>Denisse isn't bringing a technology playbook into your organization. She brings three decades of building operational foundations that people, data, and technology can all rely on. A Master of e-Business. Certifications in progress in AI-Assisted Consulting and AI-Assisted Agency Acceleration. Native fluency in English and Spanish, which means she can sit in a room with your bilingual staff, your board, or your funders and never lose the nuance. A recent teaching session for the Sustainability Network on AI fundamentals, because she'd rather explain this clearly than sell it vaguely.</p>
-        <p>She helps mission-driven organizations build the systems that allow people, data, and AI to work together. She's not a tech vendor, because her work begins by strengthening the systems organizations already rely on, and she's not an implementation shop that leaves once the tool is installed. Every founder and operations leader she's spoken with carries some version of the same unspoken fear:</p>
-        <p class="fear">“We built this with everything we had. Please don't break it.”</p>
-        <p>That fear is the starting point of her method, not an objection to get past. Every engagement starts by asking what's already working, so she knows exactly what to protect while building.</p>
-        <div class="cta-row"><a class="clink" href="#method">See the Method <span class="cv" aria-hidden="true">&#10095;</span></a></div>
-      </div>
-      <div class="reveal">
-        <p class="qlabel">What former colleagues say</p>
-        <figure class="quote"><p>“Across complex data initiatives, Denisse brought order to chaos, giving her team full autonomy while shielding them from roadblocks.”</p><cite>Sayandeep Mall</cite></figure>
-        <figure class="quote"><p>“She leads with vision and empathy, bringing structure to complex problems while the people around her feel trusted and empowered.”</p><cite>Sid Seth</cite></figure>
-        <figure class="proof-close-img reveal" aria-hidden="true"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_35NBuSfIPglHIOMZxxqoxDRFcyj/hf_20260830_192620_cb5e0e2f-997d-42dd-9cd0-3ce73eeb3db4.png" alt=""></figure>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================ 8 · FOUNDER (full-bleed dark) ============================ -->
+<!-- ============================ 10 · ABOUT DENISSE ============================ -->
 <section class="section founder" id="founder">
   <div class="wrap founder__inner">
     <div class="founder__label reveal">Our Story</div>
@@ -805,12 +859,12 @@ h3{ font-size:clamp(2.75rem, 2.4rem + 1.4vw, 4rem); font-weight:400; line-height
       <div class="founder__text reveal">
         <h2>The shift to service.</h2>
         <p>Denisse didn't leave the corporate world because she stopped believing in the importance of the work. She left because she saw where that same expertise was needed most.</p>
-        <p>She built her reputation at global scale, helping organizations align data, technology, and people under pressure. Her expertise in data management and data governance became the foundation for Impact Intelligence: the discipline behind AI that actually works, not just AI that looks like it does.</p>
+        <p>She built her reputation at global scale, helping organizations align data, technology, and people under pressure. Her expertise in data management and data governance became the foundation of the work she does now.</p>
         <p>Following a career inside the Big Four, she asked herself one honest question:</p>
         <p class="founder__q">Who would I work with if the money weren't the point?</p>
-        <p>The answer was the people doing mission work without the tools to match it: the leaders in for-profit healthcare, social services, and community development who shoulder meaningful work with deep commitment, but without the infrastructure their organizations now need. So she built In Service AI to close that specific gap.</p>
+        <p>The answer was the people doing mission work without the tools to match it: capable leaders shouldering meaningful work with deep commitment, but without the infrastructure their organizations now need. So she built In Service AI to close that specific gap.</p>
         <p>As a mother and a builder, Denisse brings a different kind of range: she listens first, and acts with discipline. She isn't a tech vendor selling you a platform. She's a Foundation Partner, someone who respects what's already valuable, strengthening what's weak, and helping you let go of what no longer serves the work.</p>
-        <div class="cta-row"><a class="clink on-dark" href="#start">See If We're a Fit <span class="cv" aria-hidden="true">&#10095;</span></a></div>
+        <div class="cta-row"><a class="clink" href="#start">See If We're a Fit <span class="cv" aria-hidden="true">&#10095;</span></a></div>
       </div>
       <aside class="founder__card reveal">
         <figure class="fc-img"><img src="https://dashboard.katalyst-crm.com/files/t1/ChatGPT%20Image%20Aug%2031,%202026,%2009_48_06%20AM.png" alt=""></figure>
@@ -824,30 +878,7 @@ h3{ font-size:clamp(2.75rem, 2.4rem + 1.4vw, 4rem); font-weight:400; line-height
   </div>
 </section>
 
-<!-- ============================ 9 · MISSION & VISION ============================ -->
-<section class="section mv" id="mission">
-  <div class="wrap">
-    <div class="mv__inner reveal">
-      <span class="eyebrow" style="color:var(--plum)">Mission &amp; Vision</span>
-      <h2 style="margin-top:1.4rem">The big idea behind In Service AI.</h2>
-      <p class="lede" style="margin-top:1.4rem">Every part of this practice exists to close one gap: between what mission-driven leaders carry and what their systems actually support.</p>
-    </div>
-    <div class="mv__grid">
-      <div class="mv__card reveal"><h3>Mission.</h3><p>In Service AI exists to lighten the load carried by the people doing the world's most meaningful work, using human-centered AI to clear the invisible drag between what you do and what the world can see of it.</p></div>
-      <div class="mv__card reveal"><h3>Vision.</h3><p>In Service AI will be known as the partner that helped mission-led organizations run with the discipline of a large institution without losing the heart that makes them special, one organization at a time.</p></div>
-    </div>
-    
-    <figure class="mv-hero reveal" aria-hidden="false">
-      <img src="https://d8j0ntlcm91z4.cloudfront.net/user_35NBuSfIPglHIOMZxxqoxDRFcyj/hf_20260830_192620_ea4bd24a-6570-47d5-b6e0-eae5e1ab22aa.png" alt="">
-      <div class="mv-hero__tint"></div>
-      <p class="mv-hero__text">Deep operational knowledge, in service of leaders doing work that matters, so they wake up energized instead of exhausted, with organizations that finally run as steadily as their mission deserves.</p>
-    </figure>
-  </div>
-</section>
-
-<hr class="rule">
-
-<!-- ============================ 10 · FREE OFFER ============================ -->
+<!-- ============================ 11 · START FREE (offer) ============================ -->
 <section class="section" id="start">
   <div class="wrap">
     <div class="offer__head reveal" style="margin-top:1.4rem">
@@ -874,19 +905,13 @@ h3{ font-size:clamp(2.75rem, 2.4rem + 1.4vw, 4rem); font-weight:400; line-height
   </div>
 </section>
 
-<!-- ============================ 11 · FINAL ============================ -->
+<!-- ============================ 12 · FINAL CTA — Diagnostic Snapshot ============================ -->
 <section class="section final">
   <div class="wrap">
-    <h2 class="reveal" style="margin-top:1.4rem">Reclaim your presence.</h2>
-    <p class="final__sub reveal">The work that matters most has always been under-resourced. That changes the moment your infrastructure starts working as hard as your team does.</p>
-    <ul class="stops reveal">
-      <li>Stop entering the same number into three systems</li>
-      <li>Stop losing institutional knowledge every time someone takes a vacation</li>
-      <li>Stop reconstructing your board report the night before the meeting</li>
-      <li>Stop watching your best people burn out on work a system could carry instead</li>
-    </ul>
+    <h2 class="reveal" style="margin-top:1.4rem">Start with a diagnostic snapshot.</h2>
+    <p class="final__sub reveal">Ninety minutes with Denisse. One practical decision brief you can hand straight to your leadership: your highest-value opportunity, named — and the honest next step to move on it.</p>
     <div class="cta-row reveal">
-      <a class="btn" href="#services">Start With a Diagnostic Snapshot <span class="cv" aria-hidden="true">&#10095;</span></a>
+      <a class="btn" href="#start">Book the Diagnostic Snapshot <span class="cv" aria-hidden="true">&#10095;</span></a>
       <a class="btn btn--ghost on-dark" href="#start">Book a Free Discovery Call</a>
     </div>
   </div>
